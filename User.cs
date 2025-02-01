@@ -5,11 +5,11 @@ public class UserLoginSystem
     public string PhoneNumber {get; set;}
     public string Password {get; set;}
     public decimal Balace {get; set;} 
-    public UserLoginSystem(string userName, string phoneNumber, string password, decimal balance)
+    public UserLoginSystem(string userName, string phoneNumber, string password)
     {
         UserName = userName;
         PhoneNumber = phoneNumber;
         Password = password;
-        Balace = 0; // default
+        Balace = 0.00M; 
     }
 }

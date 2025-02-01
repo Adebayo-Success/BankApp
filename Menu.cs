@@ -1,13 +1,13 @@
 public class Menu : Bank
 {
-    public Menu()
-    {
-        bankRepository = new Bank();
-        users = [];
-    }
-    private IBank bankRepository;
-    private List<UserLoginSystem> users;
-
+    // public Menu()
+    // {
+    //     bankRepository = new Bank();
+    //     users = [];
+    // }
+    // private IBank bankRepository;
+    // private List<UserLoginSystem> users;
+    Bank bank = new Bank();
     public void MyMenu()
     {
 
@@ -16,6 +16,7 @@ public class Menu : Bank
         {
             Console.WriteLine("Enter your option:");
             Console.WriteLine("1. Create Account");
+            Console.WriteLine("2. View all accounts");
             Console.WriteLine("0. Exit");
 
             Console.WriteLine("Enter your choice: ");
@@ -24,8 +25,11 @@ public class Menu : Bank
             switch (choice)
             {
                 case 1:
-                    bankRepository.CreateAccount();
+                    bank.CreateAccount();
                     break;
+                    case 2:
+                        bank.ViewAllAccount();
+                        break;
                 case 0:
                     running = false;
                     break;
